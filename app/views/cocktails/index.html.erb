@@ -1,12 +1,14 @@
 <div class="container">
   <div class="row">
-    <h1>Mister Cocktail</h1>
-    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+    <h1 style="color: #fff;">this is not done at all :(</h1>
     <% @cocktails.each do |cocktail| %>
-    <div class="cocktail">
-      <hr/>
-      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-    <% end %>
+    <div class="col-sm-3">
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="card">
+          <h2><%= cocktail.name %></h2>
+        </div>
+      <% end %>
     </div>
+    <% end %>
   </div>
 </div>
