@@ -9,7 +9,6 @@
 puts 'Cleaning database...'
 Cocktail.destroy_all
 Ingredient.destroy_all
-Dose.destroy_all
 
 puts 'Creating cocktails and ingredients...'
 cocktails_attributes = [
@@ -48,5 +47,5 @@ ingredients_attributes = [
 ]
 
 Cocktail.create!(cocktails_attributes)
-Ingredient.create!(cocktails_attributes)
+Ingredient.create!(ingredients_attributes)
 puts 'Finished!'
